@@ -1,0 +1,14 @@
+TODO 3) Reflection:
+    How is the jQuery file being loaded into this project: direct download or Content Delivery Network (CDN)?
+        The jQuery file in this project is being loaded into by way of CDN.
+
+    If you load the index.js file before the jquery file our program doesn't work. Why? Open the preview in a new tab and look at the console to help you find out why.
+        If you load the index.js file before the jquery file, the program will not work because the index.js file isn't linked to the other files.
+
+
+TODO 7) Reflection:
+    In your opinion, what are the pros of refactoring your HTML, CSS, and JavaScript into separate files? What are the cons?
+        The pros of refactoring my HTML, CSS, and JavaScript into separate files are that they are more organized, and it is easy to go in and change things. A con of this method is that it takes longer.
+
+    In your opinion, what are the pros of refactoring your JavaScript code into separate functions? What are the cons?
+        A pro that refactoring my JavaScript code into separate functions has that it is organized. The con is that it seems unnecessary.

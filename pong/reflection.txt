@@ -1,0 +1,113 @@
+User Story / Gameplay
+
+    Describe the gameplay
+        Two player on each side of the screen move a rectangle up or down to block a circle from entering its side.
+
+    What are the conditions when the game begins?
+        - The second player is on the right side of the screen
+        - The first player is on the left side of the screen.
+        - Both player have equal speed and lenght of rectangle.
+
+    Does the game have an end? If so, what are the conditions for when it ends?
+        The game ends wins one of the players doesn't block the circle from going passed it.
+
+    What ifs will there be?
+        - if (event.which === Arrow.Up)
+        - if (event.which === Arrow.Down)
+        - if (event.which === WS.W)
+        - if (event.which === WS.S)
+        - if (positionY > BOARD_HEIGHT)
+        - if (positionY < 0)
+        - if ("#circle" === "#firstRectangle")
+        - if ("#circle" === "#secondRectangle")
+        - if ("#circle" === BOARD_TOP)
+        - if ("#circle" === BOARD_BOTTOM)
+
+
+
+Visual Game Components:
+    What are the visual game components? For example, in Bouncing Box, the game components were the board and the box.
+        - The board is static.
+        - The two rectangles and circle are animated.
+    
+    What data will you need to manage each game component?
+        - positionY
+        - speedY
+        - var WS ( which holds W and S for first player controls)
+        - var Arrow (which hold ArrowUp and ArrowDown for second player controls)
+        - firstPoints
+        - secondPoints
+        - round
+        - center
+        - BOARD_HEIGHT
+        - BOARD_TOP
+        - BOARD_BOTTOM
+
+
+
+Events / Logic:
+    What events will occur in this game? (timer events, keyboard events, clicking events?)
+        Keyboards events that move the rectangle up and down.
+
+    How do those events affect the data of the program?
+        The keyboard events update the postions of the rectangles.
+
+    For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
+
+        For player 1:
+
+            When the ArrowUp is push:
+                * The speed is increased by +5
+                * The box hits the top of the screen and stops.
+
+            When the ArrowDown is push:
+                * The speed is increased by -5
+                * The box hits the bottom of the screen and stops.
+
+        For player 2:
+
+            When the "W" is clicked:
+                * The speed is increased by +5
+                * The box hits the top of the screen and stops.
+                The position of the box is reset to 0
+
+            When the "S" is clicked:
+                * The speed is increased by -5
+                * The box hits the bottom of the screen and stops.
+
+        Starting:
+
+            When the game starts:
+                * The position of both rectangles is reset to 0
+                * The position of the circle is reset to center.
+
+        Ending:
+        
+            When the game ends:
+                * firstPlayer has 13 firstPoints
+                or
+                * secondPlayer has 13 secondPoints
+
+        Circle:
+
+            When the circle hits left border:
+                * The position of the circle is reset to center.
+                * A point is added to the second player.
+                * New round begins
+
+            When the circle hits right border:
+                * The position of the circle is reset to center.
+                * A point is added to the first player.
+                * New round begins
+
+            When the circle hits the left rectangle:
+                * It bounces right
+
+            When the circle hits the right rectangle:
+                * It bounces left
+
+            When the circle hits the top:
+                * It bounces back in the oppisite direction and angle
+
+            When the circle hits the bottom:
+                * It bounces back in the oppisite direction and angle

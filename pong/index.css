@@ -1,0 +1,93 @@
+
+body {
+  width: 450px;
+  height: 650px;
+  background-color: rgb(241, 207, 209);
+}
+
+#board {
+  width: 440px;
+  height: 550px;
+  border: 1px solid rgb(247, 246, 230);
+  background-color: rgb(165, 135, 96);
+  position: relative;
+}
+
+
+#circle {
+  /* appearance */
+  background-color: rgb(247, 246, 230);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  /* positioning */
+  position: absolute;
+  top: 300px;
+  left: 214px;
+}
+
+#round {
+    width: 70px;
+    height: 70px;
+    background-color: rgb(231, 183, 186);
+    font-size: 150%;
+    text-decoration-color: rgb(112, 76, 59);
+    text-align: center;
+    border: 2px dotted rgb(247, 246, 230);
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    left: 190px;
+}
+
+/* First Player's css*/
+
+    #topRectangle {
+    /* appearance */
+    background-color: rgb(230, 168, 181);
+    width: 150px;
+    height: 30px;
+    /* positioning */
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    }
+
+    #firstScore {
+        width: 70px;
+        height: 70px;
+        background-color: rgb(231, 183, 186);
+        font-size: 300%;
+        text-decoration-color: rgb(112, 76, 59);
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 550px;
+    }
+
+/* Second Player's css*/
+
+    #bottomRectangle {
+    /* appearance */
+    background-color: rgb(230, 168, 181);
+    width: 150px;
+    height: 30px;
+    /* positioning */
+    position: absolute;
+    top: 450px;
+    left: 150px;
+    }
+
+    #secondScore {
+        width: 70px;
+        height: 70px;
+        background-color: rgb(231, 183, 186);
+        font-size: 300%;
+        text-decoration-color: rgb(112, 76, 59);
+        text-align: center;
+        display: block;
+        position: absolute;
+        top: 450px;
+        left: 550px;
+    }
